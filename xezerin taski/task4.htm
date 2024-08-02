@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="a">
+    <button onclick="ok()">ok</button>
+    <h1 id="ntc"></h1>
+    <script>
+
+        function ok() {
+           
+            const a = document.getElementById('a').value;
+            const ntc = document.getElementById('ntc');
+            let elave = ['Salam'];
+            elave.unshift(a);
+            elave.push(a);
+        
+            ntc.innerHTML = elave;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

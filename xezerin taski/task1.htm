@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="netice"></div>
+    <script>
+        const netice = document.getElementById('netice');
+        
+        const arr = ['emma', 'liam', 'olivia', 'noah', 'ava', 'william', 'sophia', 'jackson'];
+        kod=''
+      for( let a=0;a<arr.length;a++){
+        kod+=`${arr[a].charAt(0).toUpperCase()+arr[a].slice(1) + '<br>'}`
+      }
+
+      
+        netice.innerHTML = kod;
+    </script>
+</body>
+</html>

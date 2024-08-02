@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <input type="text" id="ad">
+    <button onclick="ok()">OK</button>
+    <h1 id="netice"></h1>
+    <script>
+        const ad=document.getElementById("ad")
+        const netice=document.getElementById("netice")
+        let kod=''
+        function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+function randomreng(){
+     return `rgb(${rand(0, 255)}, ${rand(0, 255)}, ${rand(0, 255)})`
+}
+function ok(){
+    const yazi=ad.value
+    let yazlarincoloru=''
+
+    for( let i=0; i < yazi.length;i++){
+        const color = randomreng();
+        yazlarincoloru += `<span style="color: ${color};">${yazi[i]}</span>`;
+    }
+   
+   netice.innerHTML=yazlarincoloru;
+
+ 
+}
+    </script>
+</body>
+</html>

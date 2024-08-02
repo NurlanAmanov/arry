@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="netice"></div>
+    <script>
+        const netice = document.getElementById('netice');
+        let arr = ['vahid'];
+    
+        let kod = '';
+      
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]) {
+               
+                for(let a=0;a<arr[i].length;a++){
+                    let herifler = arr[i].slice(0, a) + arr[i].charAt(a).toUpperCase() + arr[i].slice(a + 1);
+                    kod += herifler +'<br>'; 
+                }
+            }
+        }
+      
+        netice.innerHTML = kod;
+    </script>
+</body>
+</html>
